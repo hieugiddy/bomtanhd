@@ -1,0 +1,2 @@
+-copy nguyên thư mục bomtanhd vào httdoc
+-tạo database tên bomtanhd, truy cập vào database bomtanhd, bấm nhập -> chọn file bomtanhd.sql trong thư mục Phân tích hệ thống.
