@@ -25,14 +25,11 @@
 </style>
 
 
-  
-</div>
-
 <div class="group-film group-film-category" id="cat-phim-bo" data-page="1" data-slug="">
 <h2>Có $count$ kết quả tìm kiếm cho "<strong>$term$</strong>" trong $time$ giây</h2>
-<a href="$category.Url$" class="more" style="font-size:27px"><i class="fa fa-plus-square"></i></a> <span class="line-ngang"></span>
+<span class="line-ngang"></span>
 <div class="group-film-small">
-$results:{ e | 
+
 <a title="$e.Title$" href="$e.Url$" class="film-small lazy"> 
   <div class="poster-film-small " style="background-image:url(&#39;$e.Image$&#39;)"> 
     <ul class="tag-film"> 
@@ -43,12 +40,14 @@ $results:{ e |
   </div> 
 </a>
   
- }$
   
 </div>
 </div>
 <div class="phantrang"><center>$paging$</center></div>
 
+
+  
+</div>
 
 <div class="quangcao">
 </div>

@@ -24,26 +24,46 @@
 </style>
 
 
-</div>
-
 <div class="group-film group-film-category" id="cat-phim-bo" data-page="1" data-slug="">
 <h2>$category.Title$</h2>
 <a href="$category.Url$" class="more" style="font-size:27px"><i class="fa fa-plus-square"></i></a> <span class="line-ngang"></span>
 <div class="group-film-small">
-$lists : { e | 
-<a title="$e.Title$" href="$e.Url$" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;$e.LargeThumb$&#39;)"> 
+
+<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
+	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
 		<ul class="tag-film"> 
 			<li><div class="hd">HD</div></li> 
 		</ul> 
 		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">$e.Title$</b> <p>$e.Description$</p> 
+		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
 	</div> 
 </a>
- }$
+
+<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
+	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
+		<ul class="tag-film"> 
+			<li><div class="hd">HD</div></li> 
+		</ul> 
+		<div class="play"></div> </div> 
+		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
+	</div> 
+</a>
+
+<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
+	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
+		<ul class="tag-film"> 
+			<li><div class="hd">HD</div></li> 
+		</ul> 
+		<div class="play"></div> </div> 
+		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
+	</div> 
+</a>
+
 </div>
 </div>
-<div class="phantrang"><center>$category.Paging$</center></div>
+<div class="phantrang"><center>Phân trang</center></div>
+
+</div>
 
 
 <div class="quangcao">

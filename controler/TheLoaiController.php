@@ -1,6 +1,4 @@
 <?php
-function danhSachPhim(){		
-}
 function hienThiTheLoai(){
     include('model/theloai.php');
     $dstheloai= new TheLoai();

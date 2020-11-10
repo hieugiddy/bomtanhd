@@ -19,7 +19,6 @@ include('model/database.php');
 		include('view/User/header.php');
 		include('view/User/routes.php');
 	?>
-	
-</body>
 <?php include('view/User/footer.php'); ?>
+</body>
 </html>

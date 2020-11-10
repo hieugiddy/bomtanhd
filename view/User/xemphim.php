@@ -1,18 +1,3 @@
-<?php
-include('./Theme/baiviet/thongtinsanpham.php');
-?>
-
-<?php
-
-//tính lượt truy cập
-$luotxembv=$conn->prepare('select soluong from chitietsanpham where maSP="'.$_GET['id'].'"');
-$luotxembv->execute();
-$lx_c=$luotxembv->fetchcolumn();
-$lx_n=(int)($lx_c+1);
-
-$tanglx=$conn->prepare('update chitietsanpham set soluong='.$lx_n.' where maSP="'.$_GET['id'].'"');
-$tanglx->execute();
-?>
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
@@ -152,7 +137,7 @@ document.getElementById("defaultOpen").click();
 <meta itemprop="worstRating" content="1"> <span itemprop="ratingCount">69</span> </div> <img itemprop="image" src="$entry.Image$" alt="$entry.Title$"> <img itemprop="thumbnailUrl" src="$entry.DownloadUrl$" alt="$entry.Title$">
 <meta itemprop="name" content="$entry.Title$"> </div>
 <div id="video-player">
-<a href="javascript:void(0)" class="big-img-film-detail" onclick="trailer()" style="background: url($entry.Image$); background-repeat:no-repeat; background-size:contain; background-position:center;">
+<a href="javascript:void(0)" class="big-img-film-detail" onclick="trailer()" style="background: url(https://image.tmdb.org/t/p/w533_and_h300_bestv2/eXQCc4OWryM6V99mM8v3nqbsUeh.jpg); background-repeat:no-repeat; background-size:contain; background-position:center;">
 <div><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 </a>
 </div>
@@ -161,8 +146,8 @@ document.getElementById("defaultOpen").click();
   Danh sách tập phim
 </div>
   </div>
-<h1 class="title-film-detail-1" itemprop="name">$entry.Title$</h1>
-<h2 class="title-film-detail-2">$entry.Description$</h2>
+<h1 class="title-film-detail-1" itemprop="name">Bạn gái dưới lầu xin ký nhận</h1>
+<h2 class="title-film-detail-2">楼下女友请签收</h2>
 <div class="fb-gg">
 <div id="like">                                   
     <div id="fb-root"></div>
@@ -190,7 +175,7 @@ document.getElementById("defaultOpen").click();
 <li class="star" id="star-vote" style="white-space: nowrap; cursor: pointer;"><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 12.705 512 486.59" style="margin-right: 10px;"><defs><linearGradient id="star-vote_grad1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#888888"></stop><stop offset="0%" stop-color="#888888"></stop></linearGradient></defs><polygon style="fill: url(#star-vote_grad1);stroke:black;fill-opacity:1;stroke-width:2px; " points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 12.705 512 486.59" style="margin-right: 10px;"><defs><linearGradient id="star-vote_grad2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#888888"></stop><stop offset="0%" stop-color="#888888"></stop></linearGradient></defs><polygon style="fill: url(#star-vote_grad2);stroke:black;fill-opacity:1;stroke-width:2px; " points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 12.705 512 486.59" style="margin-right: 10px;"><defs><linearGradient id="star-vote_grad3" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#888888"></stop><stop offset="0%" stop-color="#888888"></stop></linearGradient></defs><polygon style="fill: url(#star-vote_grad3);stroke:black;fill-opacity:1;stroke-width:2px; " points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 12.705 512 486.59" style="margin-right: 10px;"><defs><linearGradient id="star-vote_grad4" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#888888"></stop><stop offset="0%" stop-color="#888888"></stop></linearGradient></defs><polygon style="fill: url(#star-vote_grad4);stroke:black;fill-opacity:1;stroke-width:2px; " points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 12.705 512 486.59" style="margin-right: 10px;"><defs><linearGradient id="star-vote_grad5" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#888888"></stop><stop offset="0%" stop-color="#888888"></stop></linearGradient></defs><polygon style="fill: url(#star-vote_grad5);stroke:black;fill-opacity:1;stroke-width:2px; " points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 12.705 512 486.59"><defs><linearGradient id="star-vote_grad1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#888888"></stop><stop offset="0%" stop-color="#888888"></stop></linearGradient></defs><polygon style="fill: url(#star-vote_grad1);stroke:black;fill-opacity:1;stroke-width:2px; " points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 12.705 512 486.59"><defs><linearGradient id="star-vote_grad2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#888888"></stop><stop offset="0%" stop-color="#888888"></stop></linearGradient></defs><polygon style="fill: url(#star-vote_grad2);stroke:black;fill-opacity:1;stroke-width:2px; " points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 12.705 512 486.59"><defs><linearGradient id="star-vote_grad3" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#888888"></stop><stop offset="0%" stop-color="#888888"></stop></linearGradient></defs><polygon style="fill: url(#star-vote_grad3);stroke:black;fill-opacity:1;stroke-width:2px; " points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 12.705 512 486.59"><defs><linearGradient id="star-vote_grad4" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#888888"></stop><stop offset="0%" stop-color="#888888"></stop></linearGradient></defs><polygon style="fill: url(#star-vote_grad4);stroke:black;fill-opacity:1;stroke-width:2px; " points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 12.705 512 486.59"><defs><linearGradient id="star-vote_grad5" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#888888"></stop><stop offset="0%" stop-color="#888888"></stop></linearGradient></defs><polygon style="fill: url(#star-vote_grad5);stroke:black;fill-opacity:1;stroke-width:2px; " points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></li>
 </ul>
 </div>
-$if(entry.DownloadUrl)$
+
 <div class="group-film group-film-category" id="cat-phim-sap-chieu" data-page="1" data-slug="" style="margin-top:0">
 <div class="phimdecu-slider slick-initialized slick-slider">
 
@@ -209,7 +194,7 @@ $if(entry.DownloadUrl)$
 </div>
   </div>
 </div>
-$endif$
+
 <div class="group-ndfilm-detail" itemprop="description">
 <h2 class="ndf">Nội dung phim</h2>
 <p class="content-film">
@@ -219,9 +204,12 @@ Tổng hợp hay, phim chiếu rạp mới nhất, mọt phim Trung - Hàn, Doct
 </div>
 <div class="fbchat" style="background:#fff;padding:10px 7px;">
  <div id="binhluan">
+ <!-- cmt facebook 
   <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=476759459479922&autoLogAppEvents=1" nonce="8ywAJqG6"></script>
   <div class="fb-comments" data-href="$entry.Url$" data-numposts="10" data-width="900"></div>
+  -->
+  <iframe src="https://www.facebook.com/v8.0/plugins/comments.php?app_id=476759459479922&channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df3c678b2049d1e8%26domain%3Dbomtanhd.net%26origin%3Dhttps%253A%252F%252Fbomtanhd.net%252Ff3b770d4e67eb88%26relation%3Dparent.parent&container_width=0&height=100&href=https%3A%2F%2Fbomtanhd.net%2Fphim-le%2Fhoa-moc-lan-2020.html&locale=vi_VN&numposts=10&sdk=joey&version=v8.0&width=900&height=600" frameborder="0"></iframe>
 </div>
   
 </div>
@@ -234,13 +222,13 @@ Tổng hợp hay, phim chiếu rạp mới nhất, mọt phim Trung - Hàn, Doct
 <div aria-live="polite" class="slick-list draggable">
 <div class="swiper-container" id="hieuab">
     <div class="swiper-wrapper">
-      $relates : { e |
+      <!-- phim liên quan -->
     	<div class="swiper-slide">
       	<div class="item slick-slide slick-cloned" style="width: 192px;" tabindex="-1" role="option" aria-describedby="slick-slide11" data-slick-index="-5" aria-hidden="true">
       		<a title="$e.Title$" href="$e.Url$" style="background-image:url($e.Image$)" tabindex="-1"> <div class="black-gradient"> <b class="title-film">$e.Title$</b> <p>$e.Description$</p> <ul class="tag-film"> <li><div class="hd">HD</div></li> </ul> </div> <div class="play"></div> </a>
       </div>
   	</div>
-}$
+      <!-- end phim liên quan -->
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -321,7 +309,34 @@ Tổng hợp hay, phim chiếu rạp mới nhất, mọt phim Trung - Hàn, Doct
 </div>
 
    <div id="data-phim">
-     $entry.Content$
+     <!-- entry -->
+      <script src="https://api.themoviedb.org/3/tv/101472?api_key=ad05119fa13b5ea24959fc859e02d44b&callback=getPhimBo&language=vi&region=vi"></script>
+      <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="embed-responsive-item" frameborder="0" src="https://www.youtube-nocookie.com/embed/iDgUIfgJC-A?controls=1"></iframe></p>
+
+      <div id="dsdv"><script src="https://api.themoviedb.org/3/person/2091757?api_key=ad05119fa13b5ea24959fc859e02d44b&callback=getDienVien&language=vi&region=vi"></script>
+      <div class="swiper-slide dvc">
+      <div aria-describedby="slick-slide11" aria-hidden="true" class="item slick-slide slick-cloned" data-slick-index="-5" role="option" style="width: 192px;" tabindex="-1">
+      <div class="black-gradient"><a href="https://vi.wikipedia.org/wiki/T%E1%BB%AB_H%E1%BA%A3o" style="background-image:url(https://moviee.vn/upload/actors/tu-hao-2016370451.jpg)" tabindex="-1" target="_blank" title="Từ Hảo"><b class="title-film">Từ Hảo</b> </a>
+
+      <p><a href="https://vi.wikipedia.org/wiki/T%E1%BB%AB_H%E1%BA%A3o" style="background-image:url(https://moviee.vn/upload/actors/tu-hao-2016370451.jpg)" tabindex="-1" target="_blank" title="Từ Hảo">Từ Hảo tại Di&ecirc;m Th&agrave;nh, Giang T&ocirc;, Trung Quốc, l&agrave; nữ diễn vi&ecirc;n người Trung Quốc, tốt nghiệp Học viện Điện ảnh Bắc Kinh</a></p>
+      <a href="https://vi.wikipedia.org/wiki/T%E1%BB%AB_H%E1%BA%A3o" style="background-image:url(https://moviee.vn/upload/actors/tu-hao-2016370451.jpg)" tabindex="-1" target="_blank" title="Từ Hảo"> </a></div>
+      </div>
+      </div>
+      <script src="https://api.themoviedb.org/3/person/2419475?api_key=ad05119fa13b5ea24959fc859e02d44b&callback=getDienVien&language=vi&region=vi"></script></div>
+
+      <div class="card xem">
+      <div class="card-header">Danh s&aacute;ch Server:</div>
+
+      <div class="card-body"><a class="btn mr-2 mt-2 tablinks active" id="defaultOpen" onclick="openCity(event,'https://drive.google.com/file/d/1fTkawHSd5KUJCBb4n_I5nhOXtdFNw-6m/preview')">1</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1S5i8bQa0xJ12ovmShSmAaJrsDfwhIf1T/preview')">2</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1bCmQKsuUpJXfgXf4J3Jp1B5GDcZZXcuW/preview')">3</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1av1jKa5m00b34WnKOvOQexsgT_ixzK_e/preview')">4</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1BDl8tbaPsgvftr6Bo8cdaUmbDaf35egp/preview')">5</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1b83-eJSEN0ixO3Fr6rqQy8pXYfuWnRz-/preview')">6</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/176ByR0g9tQVm-ckE8nXcZ65qUDwqKaAy/preview')">7</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1y1MgnFElT-vcWL_pORUcNTsK8mdjyJsn/preview')">8</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/12Up46QMPQl9AEQ8Nj-pdQSsa5NQmHV3b/preview')">9</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1QhZBmkyJBXtY2oWB7cg7wFjysxAwrZqx/preview')">10</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1yHOU0HznaAqAMjhxFsI57pIeigjyw1Iu/preview')">11</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1LrzP7aYgJoBMYNBvj0EPXPSHy4smlCDi/preview')">12</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/14e0k8fP1zkGg_5SPGfyBsgHAb11S5K6M/preview')">13</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1_Qq0FZJxBUcm1XjUgnMEn71G8xDFxsT_/preview')">14</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1Z9h63vQJh7Kl-gRmbHTs2hmwhSfCnxUI/preview')">15</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1KliuA-FxAIWMzz7U4GGoqqTB1kUtYqjg/preview')">16</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1pFFa4Lwf88LWyU4uBCTNTi5L9OcBW21z/preview')">17</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1H52Qz39KycBFcEHzvQ3xGR-M4OXYxHrE/preview')">18</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1AWM6AhZEBo6zgn576UvGMaZd4hBPCHAx/preview')">19</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/14zzIgeDMqNkpxheHdqWLlKw5VRVIojw_/preview')">20</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1twC7MmDzkkNNfVO2Ds15Ele-a0qBo9BV/preview')">21</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1x_O2nlnpZXyoM1Z64P6GzIIjz722xVB-/preview')">22</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1eGYwLL_rJyhWID04QtBKcblJEyJdQdON/preview')">23</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1emlB0u-58_S2SG_SnDyLvazoGCgcFVr3/preview')">24</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1KfsiOf0UCL4QE1FXrtJwHW_kwu8f_tuC/preview')">25</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1HqvmB8olR1Junez2LaDnh3ZwYRp631kH/preview')">26</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1B0OXkFJV1pb3sQxoG-3PmAAfS8tPUk_M/preview')">27</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1BAh_j7Hpt-ButDpj7fP8IQVcT3GamxQD/preview')">28</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1MsSgqeeuAOTjsem06ZaaRCKs7UKkpFK-/preview')">29</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1wXywcs_mRb5L5iIySP2EAvmuaiVM0BdW/preview')">30</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1XF7CTTQlJ2ufV8PUkXOqvcSw8l-yF4sO/preview')">31</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1rYl__D3KT2_7jqamXrp9_T10UNs98_aL/preview')">32</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1BM5HjgPiiaIODoS_YzdFteALv0zxtlqk/preview')">33</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1W0s52V2q7SufOoikmrlmGwZiPWMG8-gl/preview')">34</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1z8hHbIW88zYNoGB5i7ylmkP9QKYI-YPY/preview')">35</a> <a class="btn mr-2 mt-2 tablinks" onclick="openCity(event,'https://drive.google.com/file/d/1mGOTkOMH-Z01OXazibrtZk87ZYRJoLD9/preview')">36 End.</a></div>
+      </div>
+
+      <div class="card mt-0 tai">
+      <div class="card-header">Tải phim</div>
+
+      <div class="card-body"><a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1fTkawHSd5KUJCBb4n_I5nhOXtdFNw-6m&amp;export=download" target="_blank">1</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1S5i8bQa0xJ12ovmShSmAaJrsDfwhIf1T&amp;export=download" target="_blank">2</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1bCmQKsuUpJXfgXf4J3Jp1B5GDcZZXcuW&amp;export=download" target="_blank">3</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1av1jKa5m00b34WnKOvOQexsgT_ixzK_e&amp;export=download" target="_blank">4</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1BDl8tbaPsgvftr6Bo8cdaUmbDaf35egp&amp;export=download" target="_blank">5</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1b83-eJSEN0ixO3Fr6rqQy8pXYfuWnRz-&amp;export=download" target="_blank">6</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=176ByR0g9tQVm-ckE8nXcZ65qUDwqKaAy&amp;export=download" target="_blank">7</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1y1MgnFElT-vcWL_pORUcNTsK8mdjyJsn&amp;export=download" target="_blank">8</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=12Up46QMPQl9AEQ8Nj-pdQSsa5NQmHV3b&amp;export=download" target="_blank">9</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1QhZBmkyJBXtY2oWB7cg7wFjysxAwrZqx&amp;export=download" target="_blank">10</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1yHOU0HznaAqAMjhxFsI57pIeigjyw1Iu&amp;export=download" target="_blank">11</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1LrzP7aYgJoBMYNBvj0EPXPSHy4smlCDi&amp;export=download" target="_blank">12</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=14e0k8fP1zkGg_5SPGfyBsgHAb11S5K6M&amp;export=download" target="_blank">13</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1_Qq0FZJxBUcm1XjUgnMEn71G8xDFxsT_&amp;export=download" target="_blank">14</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1Z9h63vQJh7Kl-gRmbHTs2hmwhSfCnxUI&amp;export=download" target="_blank">15</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1KliuA-FxAIWMzz7U4GGoqqTB1kUtYqjg&amp;export=download" target="_blank">16</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1pFFa4Lwf88LWyU4uBCTNTi5L9OcBW21z&amp;export=download" target="_blank">17</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1H52Qz39KycBFcEHzvQ3xGR-M4OXYxHrE&amp;export=download" target="_blank">18</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1AWM6AhZEBo6zgn576UvGMaZd4hBPCHAx&amp;export=download" target="_blank">19</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=14zzIgeDMqNkpxheHdqWLlKw5VRVIojw_&amp;export=download" target="_blank">20</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1twC7MmDzkkNNfVO2Ds15Ele-a0qBo9BV&amp;export=download" target="_blank">21</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1x_O2nlnpZXyoM1Z64P6GzIIjz722xVB-&amp;export=download" target="_blank">22</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1eGYwLL_rJyhWID04QtBKcblJEyJdQdON&amp;export=download" target="_blank">23</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1emlB0u-58_S2SG_SnDyLvazoGCgcFVr3&amp;export=download" target="_blank">24</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1KfsiOf0UCL4QE1FXrtJwHW_kwu8f_tuC&amp;export=download" target="_blank">25</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1HqvmB8olR1Junez2LaDnh3ZwYRp631kH&amp;export=download" target="_blank">26</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1B0OXkFJV1pb3sQxoG-3PmAAfS8tPUk_M&amp;export=download" target="_blank">27</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1BAh_j7Hpt-ButDpj7fP8IQVcT3GamxQD&amp;export=download" target="_blank">28</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1MsSgqeeuAOTjsem06ZaaRCKs7UKkpFK-&amp;export=download" target="_blank">29</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1wXywcs_mRb5L5iIySP2EAvmuaiVM0BdW&amp;export=download" target="_blank">30</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1XF7CTTQlJ2ufV8PUkXOqvcSw8l-yF4sO&amp;export=download" target="_blank">31</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1rYl__D3KT2_7jqamXrp9_T10UNs98_aL&amp;export=download" target="_blank">32</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1BM5HjgPiiaIODoS_YzdFteALv0zxtlqk&amp;export=download" target="_blank">33</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1W0s52V2q7SufOoikmrlmGwZiPWMG8-gl&amp;export=download" target="_blank">34</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1z8hHbIW88zYNoGB5i7ylmkP9QKYI-YPY&amp;export=download" target="_blank">35</a> <a class="btn mr-3 mt-2" href="https://drive.google.com/uc?id=1mGOTkOMH-Z01OXazibrtZk87ZYRJoLD9&amp;export=download" target="_blank">36 End.</a></div>
+      </div>
+
+      <!-- end -->
 </div>
 <div id="id01" class="w3-modal w3-animate-opacity">
   <div class="w3-modal-content w3-card-4">
@@ -334,7 +349,7 @@ Tổng hợp hay, phim chiếu rạp mới nhất, mọt phim Trung - Hàn, Doct
       
     </div>
     <footer class="w3-container w3-teal">
-      <p>Hiếu Giddy</p>
+      <p></p>
     </footer>
   </div>
 </div>

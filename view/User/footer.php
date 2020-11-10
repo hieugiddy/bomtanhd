@@ -1,6 +1,6 @@
 <div class="khoi-phai">
 <div class="topphim-doc style1">
-<iframe src="https://www6.cbox.ws/box/?boxid=844803&amp;boxtag=sQaPTo" class="" width="100%" height="500" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+<iframe src="https://www6.cbox.ws/box/?boxid=851799&boxtag=HMAOwY" class="" width="100%" height="500" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
 </div>
 <div class="topphim-doc style1">
 <h3>top phim hot</h3>
@@ -87,7 +87,7 @@
 <li><a href="/">Nguyên tắc Cộng Đồng</a></li>
 <li><a href="/">Liên hệ Quảng Cáo</a></li>
 </ul>
-<div>Copyright ©2020 BomTanHD.net. Created & Design by <a href="//facebook.com/hieugiddy.pro" style="color:orange">Hiếu Giddy</a>.</div>
+<div>Copyright ©2020 BomTanHD.net. Created & Design by <a href="//facebook.com" style="color:orange">LTWNC Team</a>.</div>
 </div>
 </footer>
 <!-- Swiper JS -->
