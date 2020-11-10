@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 06, 2020 lúc 12:46 PM
+-- Thời gian đã tạo: Th10 10, 2020 lúc 07:39 AM
 -- Phiên bản máy phục vụ: 5.6.43
 -- Phiên bản PHP: 7.3.9
 
@@ -1128,6 +1128,26 @@ INSERT INTO `linkphim` (`maSP`, `tenhienthi`, `link`, `loai`, `server`, `ngaythe
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `nam`
+--
+
+CREATE TABLE `nam` (
+  `nam` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `nam`
+--
+
+INSERT INTO `nam` (`nam`) VALUES
+(1998),
+(2005),
+(2018),
+(2019);
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `phim`
 --
 
@@ -1376,6 +1396,12 @@ ALTER TABLE `chitietphim`
 --
 ALTER TABLE `danhsachphat`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `nam`
+--
+ALTER TABLE `nam`
+  ADD PRIMARY KEY (`nam`);
 
 --
 -- Chỉ mục cho bảng `phim`
