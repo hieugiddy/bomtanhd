@@ -4632,7 +4632,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF1m4oPSCW/e0I="
 							},
-							"name": "id"
+							"name": "id",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4640,7 +4641,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF1m4oPSCW/e0I="
 							},
-							"name": "ten"
+							"name": "ten",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4648,7 +4650,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF1m4oPSCW/e0I="
 							},
-							"name": "dsphim"
+							"name": "dsphim",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4656,7 +4659,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF1m4oPSCW/e0I="
 							},
-							"name": "slug"
+							"name": "slug",
+							"type": ""
 						}
 					]
 				}

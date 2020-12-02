@@ -19,152 +19,29 @@
 
 <!-- Phim lẻ -->
 <div class="group-film group-film-category" id="cat-phim-bo" data-page="1" data-slug="">
-<h2><a title="$c.Title$" href="$c.Url$">Phim lẻ mới<i class="fa fa-caret-right" aria-hidden="true"></i></a></h2>
-<a href="$c.Url$" class="more" style="font-size:27px"><i class="fa fa-plus-square"></i></a> <span class="line-ngang"></span>
+<h2><a title="Phim lẻ mới" href="?layout=chuyenmuc&phimle">Phim lẻ mới<i class="fa fa-caret-right" aria-hidden="true"></i></a></h2>
+<a href="?layout=chuyenmuc&phimle" class="more" style="font-size:27px"><i class="fa fa-plus-square"></i></a> <span class="line-ngang"></span>
 <div class="group-film-small">
-
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
- 
+<?php phimMoi(0,24,"phimle",null,null,null); ?>
 </div>
 </div>
 
 <!-- Phim bộ -->
 <div class="group-film group-film-category" id="cat-phim-bo" data-page="1" data-slug="">
-<h2><a title="$c.Title$" href="$c.Url$">Phim bộ mới<i class="fa fa-caret-right" aria-hidden="true"></i></a></h2>
-<a href="$c.Url$" class="more" style="font-size:27px"><i class="fa fa-plus-square"></i></a> <span class="line-ngang"></span>
+<h2><a title="Phim bộ mới" href="?layout=chuyenmuc&phimbo">Phim bộ mới<i class="fa fa-caret-right" aria-hidden="true"></i></a></h2>
+<a href="?layout=chuyenmuc&phimbo" class="more" style="font-size:27px"><i class="fa fa-plus-square"></i></a> <span class="line-ngang"></span>
 <div class="group-film-small">
-
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
- 
+<?php phimMoi(0,24,"phimbo",null,null,null); ?>
 </div>
 </div>
 
 
 <!-- Phim Việt Nam -->
 <div class="group-film group-film-category" id="cat-phim-bo" data-page="1" data-slug="">
-<h2><a title="$c.Title$" href="$c.Url$">Phim Việt Nam<i class="fa fa-caret-right" aria-hidden="true"></i></a></h2>
-<a href="$c.Url$" class="more" style="font-size:27px"><i class="fa fa-plus-square"></i></a> <span class="line-ngang"></span>
+<h2><a title="Phim Việt Nam" href="?layout=chuyenmuc&quocgia=viet-nam">Phim Việt Nam<i class="fa fa-caret-right" aria-hidden="true"></i></a></h2>
+<a href="?layout=chuyenmuc&quocgia=viet-nam" class="more" style="font-size:27px"><i class="fa fa-plus-square"></i></a> <span class="line-ngang"></span>
 <div class="group-film-small">
-
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
-
-<a title="?layout=xemphim" href="?layout=xemphim" class="film-small lazy"> 
-	<div class="poster-film-small " style="background-image:url(&#39;https://images.weserv.nl/?url=image.tmdb.org%2ft%2fp%2fw220_and_h330_face%2faKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg&h=350&w=400&t=fit&#39;)"> 
-		<ul class="tag-film"> 
-			<li><div class="hd">HD</div></li> 
-		</ul> 
-		<div class="play"></div> </div> 
-		<div class="title-film-small"> <b class="title-film" id="tenphim">Hoa Mộc Lan (2020)</b> <p>Mulan (2020)</p> 
-	</div> 
-</a>
- 
+<?php phimMoi(0,24,null,"viet-nam",null,null); ?>
 </div>
 </div>
   

@@ -24,7 +24,7 @@ class QuocGia{
 	public function getSlug(){
 		return $this->slug;
 	}
-	public function getQuocGia(){
+	public function getTatCaQuocGia(){
 		include('database.php'); //kết nối database
 		$quocgia=$conn->prepare('select * from quocgia');
 		$quocgia->execute(); //truy vấn 
@@ -37,7 +37,22 @@ class QuocGia{
 				$qg->setSlug($row['slug']);//
 				$arr[]=$qg; //thêm p tử mới cho mảng
 			}
+		$conn=null;
 		return $arr;
+	}
+	public function getChiTietQuocGia($slug){
+		include('database.php'); //kết nối database
+		$quocgia=$conn->prepare('select * from quocgia where slug="'.$slug.'"');
+		$quocgia->execute(); //truy vấn 
+		$qg=new QuocGia(); 
+		if($quocgia->rowCount()>0)
+			while($row=$quocgia->fetch(PDO::FETCH_ASSOC)){ //fetch dữ liệu
+				$qg->setId($row['id']); //set id dối tượng đó
+				$qg->setTen($row['ten']); //
+				$qg->setSlug($row['slug']);//
+			}
+		$conn=null;
+		return $qg;
 	}
 }
 ?>

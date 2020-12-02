@@ -6,6 +6,7 @@ function hienThiNam(){
         $year=$value->getYear();
         echo '<li> <a class="label-name" href="?layout=chuyenmuc&year='.$year.'">'.$year.'</a> </li>';
     } 
+    $conn=null;
 }
 
 ?>
