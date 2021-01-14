@@ -1,7 +1,7 @@
 <?php
 ob_start();
 session_start();
-include('model/database.php');
+include('view/User/thuvien.php');
 ?>
 <!DOCTYPE html>
 <html lang="vi">
