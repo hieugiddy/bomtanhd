@@ -3,6 +3,9 @@ class BinhLuanModel extends DB{
     function getAllBinhLuan(){
 		return $this->select('binhluan','*',null,null,null); 
     }
+    function getSLBinhLuan(){
+		return $this->select('binhluan','count(id) as sl',null,null,null); 
+    }
     function getAllChiTietBinhLuan(){
 		return $this->select('chitietbinhluan','*',null,null,null); 
 	}

@@ -2,7 +2,31 @@
 	<div class="span7">
 		<h1>Danh sách bình luận</h1>
 		
-		<ul class="messagesList" id="dsbinhluan"></ul>
+		<ul class="messagesList" id="dsbinhluan">
+		
+		</ul>
+		<div class="span12 center">
+			<div class="dataTables_paginate paging_bootstrap pagination">
+			<ul>
+		<?php
+			if(!isset($_GET['page'])) $page=1;
+			else $page=$_GET['page'];
+
+			if($data['tstrang']>1 && $_GET['page']>1)
+				echo '<li class="prev">
+				<a href="?page='.($_GET['page']-1).'">← Previous</a></li>';
+			for($i=1;$i<=$data['tstrang'];$i++){
+				if($i==$page)
+					echo '<li class="active"><a href="">'.$page.'</a></li>';
+				else
+					echo '<li><a href="?page='.$i.'">'.$i.'</a></li>';
+			}
+			if($data['tstrang']>1 && $_GET['page']<$data['tstrang'])
+				echo '<li class="next"><a href="?page='.($_GET['page']+1).'">Next → </a></li>';
+		?>
+		</ul>
+			</div>
+			</div>
 		<div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-content">
 				<ul class="list-inline item-details">

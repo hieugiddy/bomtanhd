@@ -10,7 +10,7 @@
 </div>
 </footer>
 <!-- Swiper JS -->
-  <script src="https://static.wapmaker.net/5cfafc47fce1810f802a08d0/Bongngotv_config/swipermin.js"></script>
+  <script src="<?php echo $data['info'][0]->linkweb.'/public/js/swiper.min.js'; ?>"></script>
 
   <!-- Initialize Swiper -->
   <script>

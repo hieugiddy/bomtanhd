@@ -21,6 +21,9 @@ class LinkPhimModel extends DB{
     function themLink($idPhim,$tenhienthi,$link,$loai,$server){
         $this->insert('linkphim','idPhim,tenhienthi,link,loai,server',array($idPhim,$tenhienthi,$link,$loai,$server));
     }
+    function themLink1($id,$idPhim,$tenhienthi,$link,$loai,$server){
+        $this->insert('linkphim','id,idPhim,tenhienthi,link,loai,server',array($id,$idPhim,$tenhienthi,$link,$loai,$server));
+    }
     function suaLink($id,$tenhienthi,$link,$loai,$server){
         $this->update('linkphim','tenhienthi,link,loai,server','where id=?',array($tenhienthi,$link,$loai,$server,$id));
     }

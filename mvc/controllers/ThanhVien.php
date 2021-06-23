@@ -45,7 +45,7 @@ class ThanhVien extends Controller{
             if(isset($_POST['dangky-tk'])){
                 //gửi mail kích hoạt tk
                 $obj=new Mail();
-                $linkkh='http://localhost:3000'.$InfoModel->getInfo()[0]->linkweb.'/ThanhVien/kichHoatTaiKhoan/'.$username;
+                $linkkh='https://'.$_SERVER['SERVER_NAME'].'/ThanhVien/kichHoatTaiKhoan/'.$username;
                 $tieudethu='Kich Hoat Tai Khoan Xem Phim BomTanHD';
                 $noidungthu='<h4>Thư xác minh tài khoản xem phim trên BomTanHD</h4>
                 <p>Xin chào '.$ten.'!</p>
@@ -72,7 +72,7 @@ class ThanhVien extends Controller{
         try{
             $ThanhVienModel=$this->model('ThanhVienModel');
             if(!empty($_POST['username']) && !empty($_POST['password'])){
-                if($ThanhVienModel->timThanhVien($_POST['username'])=='true'){
+                if($ThanhVienModel->timThanhVien($_POST['username'])!='false'){
                     $hash=$ThanhVienModel->layPass($_POST['username']);
                     if($this->xacMinhPass($_POST['password'],$hash)){
                         $trangthai=$ThanhVienModel->layTrangThai($_POST['username']);
@@ -84,10 +84,8 @@ class ThanhVien extends Controller{
                             setcookie("quyen",$quyen,time()+360000,"/","",0);
                             setcookie("ten",$ten,time()+360000,"/","",0);
                             setcookie("avatar",$avatar,time()+360000,"/","",0);
-                            $arr=explode('/',$_SERVER['REQUEST_URI']);
-                            $link='/'.$arr[1];
                             
-                            header('Location: '.$link);
+                            header('Location: http://'.$_SERVER['SERVER_NAME']);
                         }
                         else
                             throw new Exception('Tài khoản của bạn chưa được kích hoạt.Vui lòng check mail để kích hoạt');
@@ -109,24 +107,37 @@ class ThanhVien extends Controller{
     function kichHoatTaiKhoan($username){
         $ThanhVienModel=$this->model('ThanhVienModel')->kichHoatTaiKhoan($username);
         echo 'Chúc mừng bạn '.$username.' đã kích hoạt tài khoản thành công.  ';
-        $arr=explode('/',$_SERVER['REQUEST_URI']);
-        $link='/'.$arr[1].'/Account';
+        $link='/Account';
         
         echo '<a href="'.$link.'" style="color:blue"><u>Đăng nhập ngay</u><a/>';
     }
     function quenMK(){
-        //gửi mail kích hoạt tk
-        $InfoModel=$this->model('InfoModel');
-        $obj=new Mail();
-        $linkkh='http://localhost:3000'.$InfoModel->getInfo()[0]->linkweb.'/Account/setPassMoi/'.$_POST['username'];
-        $tieudethu='Doi Mat Khau Tai Khoan BomTanHD';
-        $noidungthu='<h4>Chúng tôi nhận được yêu cầu đổi mật khẩu tài khoản từ bạn.</h4>
-        <p>Xin chào '.$_POST['username'].'!</p>
-        <p>Nhấn vào link để thiết lập mật khẩu mới cho tài khoản của bạn: <a href="'.$linkkh.'" target="_blank">'.$linkkh.'</a></p>
-        ';
-        $motathu='BomTanHD - Film Bom Tấn Hành Động HD';
-        $obj->guiMail($_POST['email'],$_POST['username'],$tieudethu,$noidungthu,$motathu);
-        echo "<script>location.href='../Account'</script>"; 
+        try{
+            if(empty($_POST['username']))
+                throw new Exception("Username không được để trống");
+
+            $t=$this->model('ThanhVienModel')->timThanhVien($_POST['username']);
+            if($t=='false')
+                throw new Exception("Username không hợp lệ");
+             //gửi mail kích hoạt tk
+             $InfoModel=$this->model('InfoModel');
+             $obj=new Mail();
+             $linkkh='https://'.$_SERVER['SERVER_NAME'].'/Account/setPassMoi/'.$_POST['username'];
+             $tieudethu='Doi Mat Khau Tai Khoan BomTanHD';
+             $noidungthu='<h4>Chúng tôi nhận được yêu cầu đổi mật khẩu tài khoản từ bạn.</h4>
+             <p>Xin chào '.$_POST['username'].'!</p>
+             <p>Nhấn vào link để thiết lập mật khẩu mới cho tài khoản của bạn: <a href="'.$linkkh.'" target="_blank">'.$linkkh.'</a></p>
+             ';
+             $motathu='BomTanHD - Film Bom Tấn Hành Động HD';
+             $obj->guiMail($t[0]->email,$_POST['username'],$tieudethu,$noidungthu,$motathu);
+             echo "<script>location.href='../Account'</script>"; 
+        }
+        catch(Exception $e){
+            echo "<script>
+                    alert('".$e->getMessage()."');
+                    history.back();
+                </script>"; 
+        }
     }
     function newPass(){
         try{
@@ -135,8 +146,7 @@ class ThanhVien extends Controller{
             $password=$this->xuLiPass($_POST['password'],11);
             $ThanhVienModel=$this->model('ThanhVienModel');
             $ThanhVienModel->doiPass($password,$_POST['username']);
-            $arr=explode('/',$_SERVER['REQUEST_URI']);
-            $link='/'.$arr[1].'/Account';
+            $link='https://'.$_SERVER['SERVER_NAME'].'/Account';
             header("Location:".$link);
         }
         catch(Exception $e){
@@ -151,8 +161,7 @@ class ThanhVien extends Controller{
         setcookie("quyen","",time()-60,"/","",0);
         setcookie("ten","",time()-60,"/","",0);
         setcookie("avatar","",time()-60,"/","",0);
-        $arr=explode('/',$_SERVER['REQUEST_URI']);
-        $link='/'.$arr[1].'/Account';
+        $link=$InfoModel->getInfo()[0]->linkweb.'/Account';
         header("Location:".$link);
     }
     function doiMK() {
@@ -167,8 +176,7 @@ class ThanhVien extends Controller{
             $password=$this->xuLiPass($_POST['mkmoi'],11);
             $ThanhVienModel=$this->model('ThanhVienModel');
             $ThanhVienModel->doiPass($password,$_COOKIE['username']);
-            $arr=explode('/',$_SERVER['REQUEST_URI']);
-            $link='/'.$arr[1].'/Account';
+            $link=$InfoModel->getInfo()[0]->linkweb.'/Account';
             header("Location:".$link);
         }
         catch(Exception $e){

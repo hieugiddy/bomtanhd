@@ -14,10 +14,6 @@
 					<span class="add-on"><i class="halflings-icon user"></i></span>
 					<input class="input-large span10" name="username" id="username" type="text" placeholder="Nhập username..." required/>
 				</div>
-				<div class="input-prepend" title="Emial">
-					<span class="add-on"><i class="halflings-icon envelope"></i></span>
-					<input class="input-large span10" name="email" id="email" type="text" placeholder="Nhập email..." required/>
-				</div>
 				<div class="clearfix"></div>
 
 				<center><button type="submit" class="btn btn-primary">Gửi yêu cầu</button></center>

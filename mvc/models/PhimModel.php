@@ -9,6 +9,9 @@ class PhimModel extends DB{
 	function getChiTietPhim(){
 		return $this->select('chitietphim','*',null,null,null); 
 	}
+	function getSlugPhim($id){
+		return json_decode($this->select('phim','slug','where id=?',array($id),null))[0]->slug; 
+	}
 	function getSoLuongPhim(){
 		return json_decode($this->select('phim','count(id) as sl',null,null,null))[0]->sl; 
 	}
@@ -212,6 +215,37 @@ class PhimModel extends DB{
 		$chitietbinhluan=$this->delete('chitietbinhluan','where idPhim=?',array($id));
 		$linkphim=$this->delete('linkphim','where idPhim=?',array($slug));
 		return $chitietdaodien && $chitietdienvien && $chitietquocgia && $chitiettheloai && $chitietphim && $phim;
+	}
+
+
+	function themPhim1($id,$tenPhim,$kieu,$nam,$tengoc,$slug,$poster,$trailer,$theloai,$quocgia,$daodien,$dienvien){
+		$phim=$this->insert('phim','id,tenPhim,kieu,slug,nam,tengoc',array($id,$tenPhim,$kieu,$slug,$nam,$tengoc));
+		
+		$gioithieu="Chưa có thông tin về phim này";
+		$chitietphim=$this->insert('chitietphim','id,gioithieu,vote,poster,trailer',array($id,$gioithieu,0,$poster,$trailer));
+		
+		$str_theloai="";
+		$str_quocgia="";
+		$str_daodien="";
+		$str_dienvien="";
+		for($i=0;$i<count($theloai);$i++){
+			$str_theloai.=$theloai[$i].',';
+			$chitiettheloai=$this->insert('chitiettheloai','idPhim,idTheLoai',array($id,$theloai[$i]));
+		}
+		for($i=0;$i<count($quocgia);$i++){
+			$str_quocgia.=$quocgia[$i].',';
+			$chitietquocgia=$this->insert('chitietquocgia','idPhim,idQuocGia',array($id,$quocgia[$i]));
+		}
+		for($i=0;$i<count($daodien);$i++){
+			$str_daodien.=$daodien[$i].',';
+			$chitietdaodien=$this->insert('chitietdaodien','idPhim,idDaoDien',array($id,$daodien[$i]));
+		}
+		for($i=0;$i<count($dienvien);$i++){
+			$str_dienvien.=$dienvien[$i].',';
+			$chitietdienvien=$this->insert('chitietdienvien','idPhim,idDienVien',array($id,$dienvien[$i]));
+		}
+		$phimtt=$this->update('phim','theloai,quocgia,daodien,dienvien','where id=?',array($str_theloai,$str_quocgia,$str_daodien,$str_dienvien,$id));
+		return $phim && $chitietphim && $chitietdaodien && $chitietdienvien && $chitiettheloai && $chitietquocgia && $phimtt;
 	}
 }
 

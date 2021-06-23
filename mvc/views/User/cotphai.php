@@ -1,10 +1,10 @@
 <div class="khoi-phai">
 <div class="topphim-doc style1">
-<iframe src="https://www6.cbox.ws/box/?boxid=851799&boxtag=HMAOwY" class="" width="100%" height="500" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+<iframe src="https://www6.cbox.ws/box/?boxid=862673&boxtag=wUwAGX" class="" width="100%" height="500" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
 </div>
 <div class="topphim-doc style1">
 <h3>top phim hot</h3>
-<ul class="film mCustomScrollbar _mCS_1 mCS_no_scrollbar" style="height: 500px;overflow: auto;"><div id="mCSB_1" class="mCustomScrollBox mCS-inset-2-dark mCSB_vertical mCSB_inside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+<ul class="film mCustomScrollbar _mCS_1 mCS_no_scrollbar" style="height: 500px;overflow: auto;"><div id="mCSB_1" class="mCustomScrollBox mCS-inset-2-dark mCSB_vertical mCSB_inside" style="max-height: none;overflow:auto !important" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
 <?php
     for($i=0;$i<count($data['hot']);$i++){
         echo '

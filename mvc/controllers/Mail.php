@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require_once "./public/thuvien/PHPMailer/src/PHPMailer.php";
 require_once "./public/thuvien/PHPMailer/src/Exception.php";
@@ -12,8 +12,8 @@ class Mail extends Controller{
     function guiMail($email_user,$ten_user,$tieudethu,$noidungthu,$motathu){
         $mail = new PHPMailer(true); 
         //cấu hình thông tin người gửi.
-        $email_Admin='hangcute.ute@gmail.com';
-        $pass_Admin='Thuyhang.ute@123';
+        $email_Admin='thamnguyen1500@gmail.com';
+        $pass_Admin='Yeudw.xyz@123';
         $ten_Admin='BomTanHD Admin';
        
         try {

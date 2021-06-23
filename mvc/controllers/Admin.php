@@ -41,16 +41,28 @@ class Admin extends Controller{
         ]);
     }
     function BinhLuan(){
+        if(!isset($_GET['page'])) $page=1;
+        else $page=$_GET['page'];
+
         $info=$this->InfoModel->getInfo();
         $BinhLuanModel=$this->model("BinhLuanModel");
-        $binhluan=$BinhLuanModel->getBinhLuan(0,25);
+
+        $tsbinhluan=json_decode($BinhLuanModel->getSLBinhLuan())[0]->sl;
+        $limit=25;
+        $tstrang=ceil($tsbinhluan/$limit);
+        
+        if($page==1) $start=0;
+        else $start=$limit+($page-1);
+
+        $binhluan=$BinhLuanModel->getBinhLuan($start,$limit);
         
         $this->view("Admin",[
             "info"=>$info,
             "quyen"=>"Admin",
             "page"=>"binhluan",
             "page_name"=>"Bình Luận",
-            "binhluan"=>$binhluan
+            "binhluan"=>$binhluan,
+            "tstrang"=> $tstrang
         ]);
     }
     function Phim(){

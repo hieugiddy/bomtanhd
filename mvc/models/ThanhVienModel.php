@@ -23,7 +23,7 @@ class ThanhVienModel extends DB{
 		if($t=='false')
             return 'false';
         else
-            return 'true';
+            return json_decode($t);
 	}
 	function layPass($username){
 		return json_decode($this->select('taikhoan','password','where username=?',array($username),null))[0]->password; 
